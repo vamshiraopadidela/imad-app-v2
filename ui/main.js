@@ -1,7 +1,7 @@
 console.log('Loadedr!');
 var element=document.getElementById('madi');
 function moveRight(){
-    marginLeft=marginLeft+"10px";
+    marginLeft=marginLeft+10;
     element.style.marginLeft=marginLeft+'px';
 }
 element.onclick=function(){
