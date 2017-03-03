@@ -14,5 +14,7 @@ button.onclick=function(){
              }
      } 
   };
+  request.open('Get','http://cloud.imad.hasura.io/counter');
+  request.send(null);
   
 };
