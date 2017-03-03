@@ -14,7 +14,7 @@ button.onclick=function(){
              }
      } 
   };
-  request.open('Get','http://vamshiraopadidela.imad.hasura-app.io',true);
+  request.open('Get','http://vamshiraopadidela.imad.hasura-app.io/counter',true);
   request.send(null);
   
 };
