@@ -1,5 +1,8 @@
 console.log('Loadedr!');
 var element=document.getElementById('madi');
+function moveRight(){
+    marginLeft=marginLeft+"10px";
+}
 element.onclick=function(){
-  element.style.marginLeft='100px';  
+  var interval=setInterval(moveRight,100);
 };
