@@ -5,7 +5,7 @@ button.onclick=function(){
   request.onreadystatechange=function(){
      if(request.readyState==XMLHttpRequest.DONE){
          if(request.status==200){
-              counter= request.responeText;
+             var counter= request.responeText;
              var span=document.getElementById("count");
              span.innerHTML=counter.toString();
              
@@ -14,7 +14,7 @@ button.onclick=function(){
              }
      } 
   };
- // request.open('GET','http://vamshiraopadidela.imad.hasura-app.io/counter',true);
+  request.open('GET','http://vamshiraopadidela.imad.hasura-app.io/counter',true);
   request.send(null);
   
 };
