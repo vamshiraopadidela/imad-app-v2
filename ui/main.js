@@ -1,7 +1,7 @@
 var counter=0;
 var button=document.getElementById("counter");
 var submit=document.getElementById('sub-btn');
-submit.onclick = function(){
+button.onclick = function(){
   var request=new XMLHttpRequest(); 
   request.onreadystatechange=function(){
      if(request.readyState==XMLHttpRequest.DONE){
