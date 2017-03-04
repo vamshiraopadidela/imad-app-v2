@@ -24,7 +24,7 @@ submit.onclick=function(){
   var nameInput=document.getElementById('name');
 var name=nameInput.value;
 
-  request.open('GET','http://vamshiraopadidela.imad.hasura-app.io/counter',true);
+  request.open('GET','http://vamshiraopadidela.imad.hasura-app.io/sub-name?name=' + name,true);
   request.send(null);
   
 };
