@@ -26,7 +26,7 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 app.get('/sub-name/:name',function(req,res){
-    var name=req.query.name;
+    var names=req.query.name;
     names.push(name);
     res.send(JSON.stringify(names));
     
