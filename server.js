@@ -2,15 +2,18 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool=require('pg').Pool;
+
+var app = express();
+app.use(morgan('combined'));
+
 var config={
     user:'vamshiraopadidela',
     database:'vamshiraopadidela',
     host:'db.imad.hasura-app.io',
     port:'5432',
-    password: 'db-vamshiraopadidela-82102'
+    password:'db-vamshiraopadidela-82102'
 };
-var app = express();
-app.use(morgan('combined'));
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -20,11 +23,6 @@ app.get('/', function (req, res) {
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
-var counter=0;
-app.get('/counter',function(req,res){
-    counter=counter+1;
-    res.send(counter.toString());
-});
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
@@ -32,13 +30,7 @@ app.get('/ui/madi.png', function (req, res) {
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
-var names=[];
-app.get('/sub-name',function(req,res){
-    var name=req.query.name;
-    names.push(name);
-    res.send(JSON.stringify(names));
-    
-});
+
 var pool=new Pool(config);
 app.get('/test-db',function(req,res){
     
@@ -49,9 +41,7 @@ app.get('/test-db',function(req,res){
         else{
             res.send(JSON.stringfy(result));
         }
-            
-        
-    })
+    });
 });
 
 
