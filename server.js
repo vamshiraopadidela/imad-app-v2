@@ -39,7 +39,7 @@ app.get('/test-db',function(req,res){
             res.status(500).send(err.toString());
         }
         else{
-            res.send(JSON.stringfy(result));
+            res.send(JSON.stringfy());
         }
     });
 });
