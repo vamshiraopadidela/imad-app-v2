@@ -21,7 +21,7 @@ bold {
 }
 h1{
     height:60px;
-    background-color:blue;
+    
     
 }
 wrapper{
@@ -36,4 +36,5 @@ ul li{
 }
 p{
 color:red;
+align-content:center;
 }
