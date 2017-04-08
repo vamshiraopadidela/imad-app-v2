@@ -20,7 +20,8 @@ bold {
     height: 200px;
 }
 h1{
-    height:30px;background-color:blue;
+    height:30px;
+    background-color:green;
 }
 wrapper{
     height:100px;
@@ -31,4 +32,7 @@ ul{
 ul li{
     width:120px;
     display:inline-block;
+}
+p{
+color:red;
 }
