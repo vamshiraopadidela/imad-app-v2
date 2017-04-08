@@ -21,7 +21,8 @@ bold {
 }
 h1{
     height:30px;
-    background-color:green;
+    background-color:blue;
+    width:100px;
 }
 wrapper{
     height:100px;
